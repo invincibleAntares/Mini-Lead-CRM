@@ -3,9 +3,12 @@ const leadController = require('../controllers/leadController');
 
 const router = express.Router();
 
-// CREATE and READ endpoints
+// All CRUD endpoints
 router.post('/', leadController.createLead);
 router.get('/', leadController.getAllLeads);
 router.get('/:id', leadController.getLeadById);
+router.put('/:id', leadController.updateLead);
+router.delete('/:id', leadController.deleteLead);
+router.patch('/:id/status', leadController.updateLeadStatus);
 
 module.exports = router;

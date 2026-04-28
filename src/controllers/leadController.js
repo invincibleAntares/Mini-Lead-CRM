@@ -48,8 +48,74 @@ const getLeadById = async (req, res, next) => {
   }
 };
 
+// Update lead fields
+const updateLead = async (req, res, next) => {
+  try {
+    const { name, email, phone, source } = req.body;
+    
+    const lead = await Lead.findByIdAndUpdate(
+      req.params.id,
+      { name, email, phone, source },
+      { new: true, runValidators: true }
+    );
+    
+    if (!lead) {
+      return res.status(404).json({ error: 'Lead not found' });
+    }
+    
+    res.json(lead);
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Delete lead
+const deleteLead = async (req, res, next) => {
+  try {
+    const lead = await Lead.findByIdAndDelete(req.params.id);
+    
+    if (!lead) {
+      return res.status(404).json({ error: 'Lead not found' });
+    }
+    
+    res.status(200).json({ message: 'Lead deleted successfully' });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Update lead status with transition validation
+const updateLeadStatus = async (req, res, next) => {
+  try {
+    const { status } = req.body;
+    const { isValidTransition } = require('../utils/statusTransitions');
+    
+    const lead = await Lead.findById(req.params.id);
+    
+    if (!lead) {
+      return res.status(404).json({ error: 'Lead not found' });
+    }
+    
+    if (!isValidTransition(lead.status, status)) {
+      return res.status(400).json({ 
+        error: `Invalid status transition from ${lead.status} to ${status}` 
+      });
+    }
+    
+    lead.status = status;
+    await lead.save();
+    
+    res.json(lead);
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   createLead,
   getAllLeads,
-  getLeadById
+  getLeadById,
+  updateLead,
+  deleteLead,
+  updateLeadStatus
 };
