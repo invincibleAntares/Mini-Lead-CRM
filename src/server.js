@@ -1,18 +1,9 @@
 require("dotenv").config();
-const express = require("express");
 const connectDB = require("./config/db");
+const app = require("./app");
 
 // Connect to MongoDB
 connectDB();
-
-const app = express();
-
-app.use(express.json());
-
-
-app.get("/health", (req, res) => {
-  res.json({ message: "Server is online" });
-});
 
 const PORT = process.env.PORT || 3000;
 
