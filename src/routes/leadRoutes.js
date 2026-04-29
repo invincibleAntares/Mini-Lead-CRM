@@ -9,6 +9,7 @@ router.post('/bulk', leadController.createBulkLeads);
 router.get('/', leadController.getAllLeads);
 router.get('/:id', leadController.getLeadById);
 router.put('/:id', leadController.updateLead);
+router.put('/bulk', leadController.updateBulkLeads);
 router.delete('/:id', leadController.deleteLead);
 router.patch('/:id/status', leadController.updateLeadStatus);
 

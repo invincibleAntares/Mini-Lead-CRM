@@ -156,12 +156,82 @@ const createBulkLeads = async (req, res, next) => {
   }
 };
 
+// Update multiple leads at once
+const updateBulkLeads = async (req, res, next) => {
+  try {
+    const updates = req.body;
+    
+    if (!Array.isArray(updates)) {
+      return res.status(400).json({ error: 'Request body must be an array of update objects with IDs' });
+    }
+
+    const results = [];
+    let successful = 0;
+    let failed = 0;
+
+    for (let i = 0; i < updates.length; i++) {
+      try {
+        const { id, ...updateData } = updates[i];
+        
+        if (!id) {
+          results.push({
+            index: i,
+            success: false,
+            error: 'ID is required for update'
+          });
+          failed++;
+          continue;
+        }
+
+        const lead = await Lead.findByIdAndUpdate(
+          id,
+          updateData,
+          { new: true, runValidators: true }
+        );
+
+        if (!lead) {
+          results.push({
+            index: i,
+            success: false,
+            error: 'Lead not found'
+          });
+          failed++;
+        } else {
+          results.push({
+            index: i,
+            success: true,
+            lead: lead
+          });
+          successful++;
+        }
+      } catch (error) {
+        results.push({
+          index: i,
+          success: false,
+          error: error.message
+        });
+        failed++;
+      }
+    }
+
+    res.status(200).json({
+      total: updates.length,
+      successful,
+      failed,
+      results
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   createLead,
   createBulkLeads,
   getAllLeads,
   getLeadById,
   updateLead,
+  updateBulkLeads,
   deleteLead,
   updateLeadStatus
 };
