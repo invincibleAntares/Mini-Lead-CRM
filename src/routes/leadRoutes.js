@@ -5,6 +5,7 @@ const router = express.Router();
 
 // All CRUD endpoints
 router.post('/', leadController.createLead);
+router.post('/bulk', leadController.createBulkLeads);
 router.get('/', leadController.getAllLeads);
 router.get('/:id', leadController.getLeadById);
 router.put('/:id', leadController.updateLead);

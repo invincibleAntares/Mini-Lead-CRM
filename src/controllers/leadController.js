@@ -111,8 +111,54 @@ const updateLeadStatus = async (req, res, next) => {
   }
 };
 
+// Create multiple leads at once
+const createBulkLeads = async (req, res, next) => {
+  try {
+    const leads = req.body;
+    
+    if (!Array.isArray(leads)) {
+      return res.status(400).json({ error: 'Request body must be an array of lead objects' });
+    }
+
+    const results = [];
+    let successful = 0;
+    let failed = 0;
+
+    for (let i = 0; i < leads.length; i++) {
+      try {
+        const lead = new Lead(leads[i]);
+        const savedLead = await lead.save();
+        
+        results.push({
+          index: i,
+          success: true,
+          lead: savedLead
+        });
+        successful++;
+      } catch (error) {
+        results.push({
+          index: i,
+          success: false,
+          error: error.message
+        });
+        failed++;
+      }
+    }
+
+    res.status(201).json({
+      total: leads.length,
+      successful,
+      failed,
+      results
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   createLead,
+  createBulkLeads,
   getAllLeads,
   getLeadById,
   updateLead,
