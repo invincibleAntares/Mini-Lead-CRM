@@ -1,0 +1,946 @@
+{
+  "info": {
+    "_postman_id": "7d876501-ea07-4efd-a62b-50af9cc28836",
+    "name": "Mini-Lead-CRM",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "41533718"
+  },
+  "item": [
+    {
+      "name": "Create a new lead",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Abhishek Kumar\",\r\n  \"email\": \"kumarabhishek2928@gmail.com\",\r\n  \"phone\": \"+91 7991100164\",\r\n  \"source\": \"website\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/leads",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "leads"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create a new lead",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Abhishek Kumar\",\r\n  \"email\": \"kumarabhishek2928@gmail.com\",\r\n  \"phone\": \"+91 7991100164\",\r\n  \"source\": \"website\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/leads",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "leads"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "243"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"f3-SP/3Dj1FrnwDTEC194Ocg96lww8\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 30 Apr 2026 04:59:05 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"name\": \"Abhishek Kumar\",\n    \"email\": \"kumarabhishek2928@gmail.com\",\n    \"phone\": \"+91 7991100164\",\n    \"status\": \"NEW\",\n    \"source\": \"website\",\n    \"_id\": \"69f2e199de449347036720a2\",\n    \"created_at\": \"2026-04-30T04:59:05.630Z\",\n    \"updated_at\": \"2026-04-30T04:59:05.630Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create a new lead Copy",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Abhitha reddy\",\r\n  \"email\": \"abhithareddy@gmail.com\",\r\n  \"phone\": \"+91 9276382922\",\r\n  \"source\": \"reffrel\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/leads",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "leads"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create a new lead Copy",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Abhitha reddy\",\r\n  \"email\": \"abhithareddy@gmail.com\",\r\n  \"phone\": \"+91 9276382922\",\r\n  \"source\": \"reffrel\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/leads",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "leads"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "237"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"ed-OGwH/r8JaP6xZGKiGdRuVK310L4\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 30 Apr 2026 04:59:16 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"name\": \"Abhitha reddy\",\n    \"email\": \"abhithareddy@gmail.com\",\n    \"phone\": \"+91 9276382922\",\n    \"status\": \"NEW\",\n    \"source\": \"reffrel\",\n    \"_id\": \"69f2e1a4de449347036720a3\",\n    \"created_at\": \"2026-04-30T04:59:16.970Z\",\n    \"updated_at\": \"2026-04-30T04:59:16.970Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "List all leads",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/leads",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "leads"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "List all leads",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/leads",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "leads"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "483"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1e3-rJBbv4Dqckx9ACuONqpTb63O79E\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 30 Apr 2026 04:59:25 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"_id\": \"69f2e199de449347036720a2\",\n        \"name\": \"Abhishek Kumar\",\n        \"email\": \"kumarabhishek2928@gmail.com\",\n        \"phone\": \"+91 7991100164\",\n        \"status\": \"NEW\",\n        \"source\": \"website\",\n        \"created_at\": \"2026-04-30T04:59:05.630Z\",\n        \"updated_at\": \"2026-04-30T04:59:05.630Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69f2e1a4de449347036720a3\",\n        \"name\": \"Abhitha reddy\",\n        \"email\": \"abhithareddy@gmail.com\",\n        \"phone\": \"+91 9276382922\",\n        \"status\": \"NEW\",\n        \"source\": \"reffrel\",\n        \"created_at\": \"2026-04-30T04:59:16.970Z\",\n        \"updated_at\": \"2026-04-30T04:59:16.970Z\",\n        \"__v\": 0\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get a single lead by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/leads/69f2e199de449347036720a2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "leads",
+            "69f2e199de449347036720a2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get a single lead by ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/leads/69f2e199de449347036720a2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "leads",
+                "69f2e199de449347036720a2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "243"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"f3-ATwGUKWrwcE4fYAEI3cCO3TGxbU\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 30 Apr 2026 04:59:50 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"69f2e199de449347036720a2\",\n    \"name\": \"Abhishek Kumar\",\n    \"email\": \"kumarabhishek2928@gmail.com\",\n    \"phone\": \"+91 7991100164\",\n    \"status\": \"NEW\",\n    \"source\": \"website\",\n    \"created_at\": \"2026-04-30T04:59:05.630Z\",\n    \"updated_at\": \"2026-04-30T04:59:05.630Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update lead fields",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Abhishek Kumar Updated\",\r\n  \"email\": \"kumarabhishek2928@gmail.com\",\r\n  \"phone\": \"+91 7991100164\",\r\n  \"source\": \"direct_call\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/leads/69f2e199de449347036720a2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "leads",
+            "69f2e199de449347036720a2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update lead fields",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Abhishek Kumar Updated\",\r\n  \"email\": \"kumarabhishek2928@gmail.com\",\r\n  \"phone\": \"+91 7991100164\",\r\n  \"source\": \"direct_call\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/leads/69f2e199de449347036720a2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "leads",
+                "69f2e199de449347036720a2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "255"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"ff-gTOaUwvlPVWyxwP7w/9I8bppqa8\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 30 Apr 2026 05:00:22 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"69f2e199de449347036720a2\",\n    \"name\": \"Abhishek Kumar Updated\",\n    \"email\": \"kumarabhishek2928@gmail.com\",\n    \"phone\": \"+91 7991100164\",\n    \"status\": \"NEW\",\n    \"source\": \"direct_call\",\n    \"created_at\": \"2026-04-30T04:59:05.630Z\",\n    \"updated_at\": \"2026-04-30T05:00:22.576Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "Transition lead to a new status",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"status\": \"CONTACTED\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/leads/69f2e199de449347036720a2/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "leads",
+            "69f2e199de449347036720a2",
+            "status"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Transition lead to a new status",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"CONTACTED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/leads/69f2e199de449347036720a2/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "leads",
+                "69f2e199de449347036720a2",
+                "status"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "261"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"105-PDAeAReRNgWcKb98mT8qkTlP6kM\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 30 Apr 2026 05:00:37 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"69f2e199de449347036720a2\",\n    \"name\": \"Abhishek Kumar Updated\",\n    \"email\": \"kumarabhishek2928@gmail.com\",\n    \"phone\": \"+91 7991100164\",\n    \"status\": \"CONTACTED\",\n    \"source\": \"direct_call\",\n    \"created_at\": \"2026-04-30T04:59:05.630Z\",\n    \"updated_at\": \"2026-04-30T05:00:37.284Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "List all leads (with basic filters)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/leads?status=NEW",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "leads"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "NEW"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "List all leads (with basic filters)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/leads?status=NEW",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "leads"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "NEW"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "239"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"ef-jn76+McQBzgZ6y/rwE9mvGON+T4\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 30 Apr 2026 05:00:48 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"_id\": \"69f2e1a4de449347036720a3\",\n        \"name\": \"Abhitha reddy\",\n        \"email\": \"abhithareddy@gmail.com\",\n        \"phone\": \"+91 9276382922\",\n        \"status\": \"NEW\",\n        \"source\": \"reffrel\",\n        \"created_at\": \"2026-04-30T04:59:16.970Z\",\n        \"updated_at\": \"2026-04-30T04:59:16.970Z\",\n        \"__v\": 0\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Delete a lead",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/leads/69f2e199de449347036720a2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "leads",
+            "69f2e199de449347036720a2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete a lead",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/leads/69f2e199de449347036720a2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "leads",
+                "69f2e199de449347036720a2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "39"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"27-7qQttrJyEpk+0WPs/9+wx/ufV/k\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 30 Apr 2026 05:03:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Lead deleted successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create multiple leads at once",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n  {\r\n    \"name\": \"Abhishek Kumar\",\r\n    \"email\": \"kumarabhishek2928@gmail.com\", \r\n    \"phone\": \"+91 7991100164\",\r\n    \"source\": \"website\"\r\n  },\r\n  {\r\n    \"name\": \"Priya Sharma\",\r\n    \"email\": \"priya.sharma@gmail.com\",\r\n    \"phone\": \"+91 9876543210\", \r\n    \"source\": \"referral\"\r\n  },\r\n  {\r\n    \"name\": \"Rahul Verma\",\r\n    \"email\": \"rahul.verma@yahoo.com\",\r\n    \"phone\": \"+91 8765432109\",\r\n    \"source\": \"campaign\"\r\n  }\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/leads/bulk",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "leads",
+            "bulk"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create multiple leads at once",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  {\r\n    \"name\": \"Abhishek Kumar\",\r\n    \"email\": \"kumarabhishek2928@gmail.com\", \r\n    \"phone\": \"+91 7991100164\",\r\n    \"source\": \"website\"\r\n  },\r\n  {\r\n    \"name\": \"Priya Sharma\",\r\n    \"email\": \"priya.sharma@gmail.com\",\r\n    \"phone\": \"+91 9876543210\", \r\n    \"source\": \"referral\"\r\n  },\r\n  {\r\n    \"name\": \"Rahul Verma\",\r\n    \"email\": \"rahul.verma@yahoo.com\",\r\n    \"phone\": \"+91 8765432109\",\r\n    \"source\": \"campaign\"\r\n  }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/leads/bulk",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "leads",
+                "bulk"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "869"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"365-rEmxCBsdS5DL/I18/SWxiyPxcuQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 30 Apr 2026 05:03:22 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"total\": 3,\n    \"successful\": 3,\n    \"failed\": 0,\n    \"results\": [\n        {\n            \"index\": 0,\n            \"success\": true,\n            \"lead\": {\n                \"name\": \"Abhishek Kumar\",\n                \"email\": \"kumarabhishek2928@gmail.com\",\n                \"phone\": \"+91 7991100164\",\n                \"status\": \"NEW\",\n                \"source\": \"website\",\n                \"_id\": \"69f2e29ade449347036720a4\",\n                \"created_at\": \"2026-04-30T05:03:22.437Z\",\n                \"updated_at\": \"2026-04-30T05:03:22.437Z\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"index\": 1,\n            \"success\": true,\n            \"lead\": {\n                \"name\": \"Priya Sharma\",\n                \"email\": \"priya.sharma@gmail.com\",\n                \"phone\": \"+91 9876543210\",\n                \"status\": \"NEW\",\n                \"source\": \"referral\",\n                \"_id\": \"69f2e29ade449347036720a5\",\n                \"created_at\": \"2026-04-30T05:03:22.441Z\",\n                \"updated_at\": \"2026-04-30T05:03:22.441Z\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"index\": 2,\n            \"success\": true,\n            \"lead\": {\n                \"name\": \"Rahul Verma\",\n                \"email\": \"rahul.verma@yahoo.com\",\n                \"phone\": \"+91 8765432109\",\n                \"status\": \"NEW\",\n                \"source\": \"campaign\",\n                \"_id\": \"69f2e29ade449347036720a6\",\n                \"created_at\": \"2026-04-30T05:03:22.444Z\",\n                \"updated_at\": \"2026-04-30T05:03:22.444Z\",\n                \"__v\": 0\n            }\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update multiple leads at once",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n  {\r\n    \"id\": \"69f1f53271e9a41d16b55d78\",\r\n    \"name\": \"Abhishek Kumar Updated bulk\",\r\n    \"source\": \"direct_call\"\r\n  },\r\n  {\r\n    \"id\": \"69f1f53271e9a41d16b55d79\", \r\n    \"phone\": \"+91 9999999999\",\r\n    \"source\": \"social_media\"\r\n  }\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/leads/bulk",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "leads",
+            "bulk"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update multiple leads at once",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  {\r\n    \"id\": \"69f2e29ade449347036720a4\",\r\n    \"name\": \"Abhishek Kumar Updated bulk\",\r\n    \"source\": \"direct_call\"\r\n  },\r\n  {\r\n    \"id\": \"69f2e29ade449347036720a5\", \r\n    \"phone\": \"+91 9999999999\",\r\n    \"source\": \"social_media\"\r\n  }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/leads/bulk",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "leads",
+                "bulk"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "620"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"26c-VdyEQDbdHTpDn3Lm3rUiirfe12E\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 30 Apr 2026 05:04:30 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"total\": 2,\n    \"successful\": 2,\n    \"failed\": 0,\n    \"results\": [\n        {\n            \"index\": 0,\n            \"success\": true,\n            \"lead\": {\n                \"_id\": \"69f2e29ade449347036720a4\",\n                \"name\": \"Abhishek Kumar Updated bulk\",\n                \"email\": \"kumarabhishek2928@gmail.com\",\n                \"phone\": \"+91 7991100164\",\n                \"status\": \"NEW\",\n                \"source\": \"direct_call\",\n                \"created_at\": \"2026-04-30T05:03:22.437Z\",\n                \"updated_at\": \"2026-04-30T05:04:30.823Z\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"index\": 1,\n            \"success\": true,\n            \"lead\": {\n                \"_id\": \"69f2e29ade449347036720a5\",\n                \"name\": \"Priya Sharma\",\n                \"email\": \"priya.sharma@gmail.com\",\n                \"phone\": \"+91 9999999999\",\n                \"status\": \"NEW\",\n                \"source\": \"social_media\",\n                \"created_at\": \"2026-04-30T05:03:22.441Z\",\n                \"updated_at\": \"2026-04-30T05:04:30.826Z\",\n                \"__v\": 0\n            }\n        }\n    ]\n}"
+        }
+      ]
+    }
+  ]
+}
